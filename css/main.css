@@ -1,0 +1,74 @@
+.box-preview {
+  display: none; }
+
+.main-container {
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.titlesit {
+  font-size: 29px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 10px;
+  color: #f99533; }
+
+#gotop {
+  top: 10px;
+  left: 10px;
+  position: fixed;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px; }
+
+#idbody {
+  background-color: #bc3203; }
+
+#main_aff {
+  width: 70%;
+  position: fixed;
+  left: 34%; }
+  #main_aff #buttons {
+    text-align: center; }
+  @media screen and (max-width: 992px) {
+    #main_aff {
+      width: 100%;
+      position: static; } }
+  #main_aff #id_main_aff {
+    padding: 0; }
+
+.ft9 {
+  font-size: 9px;
+  line-height: 0px;
+  background-color: #ee8126; }
+
+#idbody li, #idbody select, #idbody label, #idbody form {
+  border-color: #e04f00; }
+
+#idheadgch label, #idheadgch select {
+  background-color: #f99533;
+  color: #e04f00; }
+
+#idheadgch label {
+  background-color: #ee8126;
+  color: #bc3203; }
+
+.title_art {
+  font-weight: bolder;
+  background-color: #ee8126; }
+
+#idbody .title_art {
+  background-color: #dd7119;
+  color: black; }
+
+#idbody button {
+  border-color: #e04f00; }
+
+#mceu_31 {
+  display: none; }
+
+#addart_Modal .modal-dialog {
+  max-width: 860px;
+  background-color: white; }
+
+/*# sourceMappingURL=main.css.map */

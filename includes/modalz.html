@@ -1,0 +1,110 @@
+<div class="modal fade" id="addart_Modal" tabindex="-11" role="dialog" aria-labelledby="addart_ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addart_ModalLabel">Nouvel Article</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="titre_art" class="col-form-label">Titre article</label>
+            <input type="text" class="form-control" id="titre_art">
+          </div>
+          <div class="form-group  mb-3">
+        <!--    <label for="text_art" class="col-form-label">Text :</label>
+            <textarea class="form-control" id="text_art"></textarea>-->
+            <?php include 'includes/editor/editor.html'; ?>
+          </div>
+
+        </form>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Auteur</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choix...</option>
+                <?php include 'php/mod_auteur.php'; ?>
+              </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect02">Catégorie</label>
+            </div>
+                <select class="custom-select" id="inputGroupSelect02">
+                  <option selected>Choix...</option>
+                  <?php include 'php/mod_categorie.php'; ?>
+                </select>
+            </div>
+            </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" onclick="ajax_add_article()" class="btn btn-primary" data-dismiss="modal">Ajouter Article</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="addaut_Modal" tabindex="-12" role="dialog" aria-labelledby="addaut_ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addaut_ModalLabel">Nouvel auteur</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="add_aut_mail">Mail</label>
+            <input type="text" class="form-control" id="add_aut_mail" aria-describedby="emailHelp" placeholder="Mail">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="add_aut_nom">Nom</label>
+            <input type="text" class="form-control" id="add_aut_nom" placeholder="Nom">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Me tenir informé(e)</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="ajax_add_auteur()">Add auteur</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="addcat_Modal" tabindex="-13" role="dialog" aria-labelledby="addcat_ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addcat_ModalLabel">Nouvelle catégorie</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="cat_name" class="col-form-label">Nom de la catégorie</label>
+            <input type="text" class="form-control" id="cat_name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="ajax_add_categorie()">Add Catégorie</button>
+      </div>
+    </div>
+  </div>
+</div>
